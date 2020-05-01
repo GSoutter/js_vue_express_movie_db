@@ -21,13 +21,13 @@ export default {
   props: ['film'],
   methods: {
     deleteFilm: function(){
-        // TODO: Code deleteFilm method
         MovieService.deleteMovie(this.film._id)
         .then(() => {eventBus.$emit('movie-deleted', this.film._id)})
       },
 
     selectFilm: function(){
       //TODO: Code film Selected Method
+      eventBus.$emit('movie-selected', this.film)
     }
   }
 }

@@ -1,6 +1,7 @@
 <template>
   <section>
     <movie-header />
+    <movie-detail />
     <films-grid />
   </section>
 </template>
@@ -8,12 +9,14 @@
 <script>
 import FilmsGrid from '@/components/FilmsGrid';
 import MovieHeader from '@/components/MovieHeader';
+import MovieDetail from '@/components/MovieDetail';
 
 export default {
   name: 'app',
   components: {
     'films-grid': FilmsGrid,
-    'movie-header': MovieHeader
+    'movie-header': MovieHeader,
+    'movie-detail': MovieDetail,
   }
 }
 </script>
@@ -22,7 +25,7 @@ export default {
 
 body {
   font-family: 'Source Serif Pro', serif;
-  
+
   background-color: #E1E5F2;
   background-position: center;
   width: 100%;
