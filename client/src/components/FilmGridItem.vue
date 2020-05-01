@@ -1,7 +1,7 @@
 <template lang="html">
 <div class="film-card">
   <h2>{{film.title}} </h2>
-  <p><span class="film-key">Genre: </span>{{film.Genre}}  </p>
+  <p><span class="film-key">Genre: </span>{{film.genres.join(", ")}}  </p>
   <p><span class="film-key">Rating: </span>{{film.rating}}  </p>
   <p><span class="film-key">Release Date: </span>{{film.release_date}}  </p>
   <p><span class="film-key">Running time: </span>{{film.runtime}}   </p>
@@ -12,15 +12,21 @@
 </template>
 
 <script>
+import MovieService from '@/services/MovieService.js'
+import {eventBus} from '@/main.js';
+
 
 export default {
   name: 'film-card',
   props: ['film'],
   methods: {
-    deleteFilm(){
-      // TODO: Code deleteFilm method
-    },
-    selectFilm() {
+    deleteFilm: function(){
+        // TODO: Code deleteFilm method
+        MovieService.deleteMovie(this.film._id)
+        .then(() => {eventBus.$emit('movie-deleted', this.film._id)})
+      },
+
+    selectFilm: function(){
       //TODO: Code film Selected Method
     }
   }
