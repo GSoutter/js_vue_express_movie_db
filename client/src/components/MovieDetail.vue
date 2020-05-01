@@ -9,6 +9,7 @@
     <p v-if="this.film.crew.producers.length === 1"><span class="film-key">Producers: </span>{{film.crew.producers[0]}}   </p>
     <p v-if="this.film.crew.producers.length > 1"><span class="film-key">Producers: </span>{{film.crew.producers.join('/')}}   </p>
     <p><span class="film-key">Plot Summary: </span>{{film.plot_summary}}   </p>
+    <img :src="require(`../assets/movies_img/${film.img}`)">
 
   </div>
 </template>
