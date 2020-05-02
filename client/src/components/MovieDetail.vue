@@ -3,7 +3,7 @@
     <h2>{{film.title}} </h2>
     <p><span class="film-key">Genre: </span>{{film.genres.join(", ")}}  </p>
     <p><span class="film-key">Rating: </span>{{film.rating}}  </p>
-    <p><span class="film-key">Release Date: </span>{{film.release_date}}  </p>
+    <p><span class="film-key">Release Date: </span>{{film.release_date | moment('DD MMM YYYY')}}  </p>
     <p><span class="film-key">Running time: </span>{{film.runtime}}   </p>
     <p><span class="film-key">Director: </span>{{film.crew.director}}   </p>
     <p v-if="this.film.crew.producers.length === 1"><span class="film-key">Producers: </span>{{film.crew.producers[0]}}   </p>
