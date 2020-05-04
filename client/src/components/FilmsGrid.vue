@@ -33,10 +33,22 @@ export default {
 </script>
 
 <style lang="css" scoped>
-
+/*
 .film-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+} */
+
+.film-wrapper {
+  display: grid;
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+  /* grid-auto-rows: 70px; */
+  grid-gap: 2em;
+  margin: 2%;
+  /* border-style: solid; */
+
 }
+
 </style>

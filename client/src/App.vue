@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id = "app">
     <movie-header />
     <movie-detail />
     <films-grid />
@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style>
-
+/*
 body {
   font-family: 'Source Serif Pro', serif;
 
@@ -36,5 +36,29 @@ body {
 h1, h2, h3 {
   color: #022B3A;
   font-family: 'Skranji', cursive;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
+    /* background: #222129; */
+}
+
+body {
+  background: #222129;
+}
+
+#app {
+  display: grid;
+  grid-template-rows: 100px 1fr ;
+  grid-gap: 1em;
+
+
+  background: #222129;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  color: white;
+
 }
 </style>
