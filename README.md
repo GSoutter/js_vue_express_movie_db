@@ -1,4 +1,4 @@
-# Games Hub
+# Movie Database
 
 Games Hub is a full stack JavaScript application with an Express server and MongoDB database.
 
